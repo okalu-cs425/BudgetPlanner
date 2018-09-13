@@ -5,7 +5,6 @@
  */
 package controlers;
 
-import com.sun.javafx.charts.ChartLayoutAnimator;
 import static controlers.MainSceneController.contentPane;
 import java.io.IOException;
 import java.util.HashSet;
@@ -35,12 +34,14 @@ import models.Wallet;
  * @author ognev
  */
 public class CategorySceneController implements BaseController {
-        @FXML
+
+    @FXML
     private ListView listView;
         
     private ChoiceBox choiceBox;
         private Set<String> stringCategorySet = new HashSet<String>();
             ObservableList observableCategoryList = FXCollections.observableArrayList();
+
     @Override
     public void openCreateScene() {
           try {

@@ -53,7 +53,7 @@ public class MainSceneController implements Initializable {
         List<Wallet> wallets = Main.getUser().getWallets();
         String[] strWallets = new String[wallets.size()];
         for (int i = 0; i < wallets.size(); i++) {
-            strWallets[i] = wallets.get(i).getName() + ": " + wallets.get(i).getBalance();
+            strWallets[i] = wallets.get(i).getName() + ": " + String.format("$%,.2f", wallets.get(i).getBalance());
         }
         choiceWalletBox.setItems(FXCollections.observableArrayList(strWallets));
 
